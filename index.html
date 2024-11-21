@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Acadêmico - IFPB</title>
+  </head>
+
+  <body>
+    <section id="aluno">
+      <h2>Aluno</h2>
+      Nome:<input id="nome" /><br />
+      Idade:<input id="idade" type="number" /><br />
+      Matrícula:<input id="matricula" /><br />
+
+      <button onclick="controladorAluno.inserir()">Cadastrar</button>
+
+      <ol id="listaAlunos"></ol>
+    </section>
+    <section id="disciplina">
+      <h2>Disciplina</h2>
+      Código:<input id="codigo" /><br />
+      Disciplina:<input id="nome_disciplina" /><br />
+      <button onclick="controladorDisciplina.inserir()">Cadastrar</button>
+      <ol id="lista_disciplinas"></ol>
+    </section>
+
+    <section id="inserir_aluno">
+      <h2>Inserir Aluno em Disciplina</h2>
+      Código:<input id="inserir_codigo" /><br />
+      Matrícula:<input id="inserir_matricula" /><br />
+      <button onclick="controladorDisciplina.inserirAlunoEmDisciplina()">
+        Cadastrar
+      </button>
+      <div id="inserir_output"></div>
+      <ul id="lista_output"></ul>
+    </section>
+
+    <script src="modelo/aluno.js"></script>
+    <script src="repositorio/aluno_repositorio.js"></script>
+    <script src="servico/aluno_service.js"></script>
+    <script src="controlador/aluno_controlador.js"></script>
+    <script src="modelo/disciplina.js"></script>
+    <script src="repositorio/disciplina_repositorio.js"></script>
+    <script src="servico/disciplina_service.js"></script>
+    <script src="controlador/disciplina_controlador.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
